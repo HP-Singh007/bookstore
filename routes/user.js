@@ -1,12 +1,11 @@
 import express from "express"
+import { login } from "../controllers/user.js";
 
+
+//router
 const router=express.Router();
 
-router.get('/me',(req,res)=>{
-    res.json({
-        success:true,
-        message:"Just checking",
-    })
-})
+
+router.post('/login',login);
 
 export default router;
